@@ -1,0 +1,14 @@
+{
+  "name": "GraphQL",
+  "url" : "https://github.com/YOUR_NAME/GraphQL/",
+  "license": "MIT",
+  "tags": ["haxe","js","nodejs","python","swf","as3","lua","php7","neko","hl","php","java","cpp","cs"],
+  "description": "description of GraphQL",
+  "classPath": "src",
+  "version": "0.0.1",
+  "releasenote": "Initial release",
+  "contributors": ["YOUR_NAME"],
+  "dependencies": {
+
+  }
+}
