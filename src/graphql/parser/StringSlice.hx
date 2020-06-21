@@ -1,4 +1,4 @@
-package graphql;
+package graphql.parser;
 // This file copied from haxetink's tink_parse library:
 //
 //    The MIT License (MIT)

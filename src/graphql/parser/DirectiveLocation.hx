@@ -1,4 +1,4 @@
-package graphql;
+package graphql.parser;
 
 /**
  * The set of allowed directive location values.

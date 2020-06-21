@@ -1,9 +1,9 @@
-package graphql;
+package graphql.parser;
 
-import graphql.TokenEnum;
-import graphql.AST.Token;
+import graphql.parser.TokenEnum;
+import graphql.parser.AST.Token;
 
-using graphql.StringSlice;
+using graphql.parser.StringSlice;
 
 /**
  * Given a Source object, creates a Lexer for that source.

@@ -1,7 +1,7 @@
-package graphql;
+package graphql.parser;
 
-import graphql.Macro.ASSERT;
-import graphql.Macro.AssertionFailure;
+import graphql.parser.Macro.ASSERT;
+import graphql.parser.Macro.AssertionFailure;
 
 private typedef Location = {
     line: Int,

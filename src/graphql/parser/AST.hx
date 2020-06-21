@@ -1,7 +1,7 @@
-package graphql;
+package graphql.parser;
 
 import haxe.ds.ReadOnlyArray;
-import graphql.TokenEnum;
+import graphql.parser.TokenEnum;
 
 /**
  * Contains a range of UTF-8 character offsets and token references that

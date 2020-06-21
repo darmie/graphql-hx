@@ -1,11 +1,11 @@
-package graphql;
+package graphql.parser;
 
-using graphql.AST;
-using graphql.Kind;
+using graphql.parser.AST;
+using graphql.parser.Kind;
 
-import graphql.Macro.ASSERT;
-import graphql.Macro.AssertionFailure;
-import graphql.TokenEnum;
+import graphql.parser.Macro.ASSERT;
+import graphql.parser.Macro.AssertionFailure;
+import graphql.parser.TokenEnum;
 
 /**
  * Configuration options to control parser behavior

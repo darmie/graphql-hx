@@ -1,4 +1,4 @@
-package graphql;
+package graphql.parser;
 
 enum abstract TokenEnum(String) from String to String {
     var SOF;

@@ -1,4 +1,4 @@
-package graphql;
+package graphql.parser;
 
 import haxe.macro.Expr;
 using haxe.macro.ExprTools;

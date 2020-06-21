@@ -1,6 +1,6 @@
-package graphql;
+package graphql.parser;
 
-import graphql.AST.Location;
+import graphql.parser.AST.Location;
 
 /**
  * Represents a location in a Source.

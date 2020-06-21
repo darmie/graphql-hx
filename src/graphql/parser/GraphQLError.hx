@@ -1,7 +1,7 @@
-package graphql;
+package graphql.parser;
 
 import haxe.ds.ReadOnlyArray;
-import graphql.AST.ASTNode;
+import graphql.parser.AST.ASTNode;
 
 class GraphQLError /*extends haxe.Exception*/ {
 

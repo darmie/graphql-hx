@@ -1,7 +1,7 @@
 package ;
 
-import graphql.Source;
-import graphql.Parser;
+import graphql.parser.Source;
+import graphql.parser.Parser;
 
 /**
 	@author $author
