@@ -1,7 +1,7 @@
 package ;
 
 import graphql.Source;
-import graphql.Parser;
+using graphql.Parser;
 
 /**
 	@author $author
@@ -12,7 +12,7 @@ class Main {
 	}
 
 	public function new() {
-		var s:Source = 
+		var gql:Source = 
 			'type Query{
 				user:User @isAuthenticated
 				cardPin(cardID:ID!):CardPinView!
@@ -24,10 +24,8 @@ class Main {
 				getUserWallets:[Wallet!]! @isAuthenticated
 				getBalance(userID:ID!, walletID:ID!):BalanceResult @isAuthenticated
 			}';
-	
-		var doc = Parser.parse(s, {
-			noLocation: true
-		});
-		trace(doc);
+		
+		var document = gql.parse({noLocation: true});
+		trace(document);
 	}
 }

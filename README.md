@@ -23,10 +23,10 @@ Run `npm install` to install the dependencies.
 
 
 ```hx
-import graphql.Parser;
+using graphql.Parser;
 import graphql.Source;
 
-var s:Source = 
+var gql:Source = 
 	'type Query{
 		user:User @isAuthenticated
 		getCurrencies:[Currency!]!
@@ -37,10 +37,8 @@ var s:Source =
 		getBalance(userID:ID!, walletID:ID!):BalanceResult @isAuthenticated
 	}';
 	
-var doc = Parser.parse(s, {
-	noLocation: true
-});
-trace(doc);
+var document = gql.parse({noLocation: true});
+trace(document);
 ```
 
 ### Compile js
