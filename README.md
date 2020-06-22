@@ -38,7 +38,7 @@ var s:Source =
 	}';
 	
 var doc = Parser.parse(s, {
-			noLocation: true
+	noLocation: true
 });
 trace(doc);
 ```
