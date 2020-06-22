@@ -29,7 +29,7 @@ class BlockString {
 	}
 
 	public static function getBlockStringIndentation(lines:Array<String>):Int {
-		var commonIndent = null;
+		var commonIndent:Null<Int> = null;
 
 		for (i in 1...lines.length) {
 			final line = lines[i];

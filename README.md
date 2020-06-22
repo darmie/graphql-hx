@@ -1,5 +1,7 @@
 # GraphQL
 
+## A set of tools for using GraphQL in Haxe and target programming languages / runtime.
+
 ### Dependencies
 
  * [Haxe](https://haxe.org/)
@@ -13,6 +15,33 @@
 
 This project uses [lix.pm](https://github.com/lix-pm/lix.client) as Haxe package manager.
 Run `npm install` to install the dependencies.
+
+
+## Usage 
+
+### Parsing GraphQL source to AST
+
+
+```hx
+import graphql.Parser;
+import graphql.Source;
+
+var s:Source = 
+			'type Query{
+				user:User @isAuthenticated
+				getCurrencies:[Currency!]!
+				getCountries:[Country!]!
+				userTransactions(walletID: ID!):[WalletAccountingEntry] @isAuthenticated
+				transactionsAggregate(startDate:DateTime, endDate:DateTime):[Transaction] @isAuthenticated
+				getUserWallets:[Wallet!]! @isAuthenticated
+				getBalance(userID:ID!, walletID:ID!):BalanceResult @isAuthenticated
+			}';
+	
+var doc = Parser.parse(s, {
+			noLocation: true
+});
+trace(doc);
+```
 
 ### Compile js
 
@@ -97,6 +126,6 @@ npm run haxe build-cpp.hxml
 
 ```
 npm run haxe build-cs.hxml
-bin/GraphQL/bin/Main.exe.exe
+bin/GraphQL/bin/Main.exe
 ```
 

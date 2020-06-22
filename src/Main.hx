@@ -1,7 +1,7 @@
 package ;
 
-import graphql.parser.Source;
-import graphql.parser.Parser;
+import graphql.Source;
+import graphql.Parser;
 
 /**
 	@author $author
@@ -12,7 +12,7 @@ class Main {
 	}
 
 	public function new() {
-		var s:Source = new Source(
+		var s:Source = 
 			'type Query{
 				user:User @isAuthenticated
 				cardPin(cardID:ID!):CardPinView!
@@ -23,17 +23,11 @@ class Main {
 				transactionsAggregate(startDate:DateTime, endDate:DateTime):[Transaction] @isAuthenticated
 				getUserWallets:[Wallet!]! @isAuthenticated
 				getBalance(userID:ID!, walletID:ID!):BalanceResult @isAuthenticated
-			}'
-		);
-		// var p:Parser = new Parser(s);
+			}';
 	
 		var doc = Parser.parse(s, {
 			noLocation: true
 		});
-		trace(haxe.Json.stringify(doc));
-		// for(def in doc.definitions){
-		// 	trace(def);
-		// }
-		
+		trace(doc);
 	}
 }
