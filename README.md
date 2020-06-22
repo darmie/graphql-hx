@@ -27,15 +27,15 @@ import graphql.Parser;
 import graphql.Source;
 
 var s:Source = 
-			'type Query{
-				user:User @isAuthenticated
-				getCurrencies:[Currency!]!
-				getCountries:[Country!]!
-				userTransactions(walletID: ID!):[WalletAccountingEntry] @isAuthenticated
-				transactionsAggregate(startDate:DateTime, endDate:DateTime):[Transaction] @isAuthenticated
-				getUserWallets:[Wallet!]! @isAuthenticated
-				getBalance(userID:ID!, walletID:ID!):BalanceResult @isAuthenticated
-			}';
+	'type Query{
+		user:User @isAuthenticated
+		getCurrencies:[Currency!]!
+		getCountries:[Country!]!
+		userTransactions(walletID: ID!):[WalletAccountingEntry] @isAuthenticated
+		transactionsAggregate(startDate:DateTime, endDate:DateTime):[Transaction] @isAuthenticated
+		getUserWallets:[Wallet!]! @isAuthenticated
+		getBalance(userID:ID!, walletID:ID!):BalanceResult @isAuthenticated
+	}';
 	
 var doc = Parser.parse(s, {
 			noLocation: true
